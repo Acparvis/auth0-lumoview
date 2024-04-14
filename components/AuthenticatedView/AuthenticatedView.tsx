@@ -10,11 +10,15 @@ export const AuthenticatedView = () => {
     <YStack fullscreen={true} borderRadius={1} borderColor={'black'} gap={'$2'}>
       <SizableText size="$9">Welcome {user?.nickname}</SizableText>
       <Text>Your roles are:</Text>
-      <Paragraph size="$2" fontWeight="800">
-        {user?.['https://lumoview.com/roles']?.map((role: string) => {
-          return <Text key={role}>{role}</Text>;
-        })}
-      </Paragraph>
+
+      {user?.['https://lumoview.com/roles']?.map((role: string) => {
+        return (
+          <Paragraph size="$4" fontWeight="800" key={role}>
+            {role}
+          </Paragraph>
+        );
+      })}
+
       <EmailVerificationIndicator />
     </YStack>
   );

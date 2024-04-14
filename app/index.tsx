@@ -29,8 +29,9 @@ export default function Home() {
       <Container>
         <ScreenContent path="app/index.tsx" title="Home">
           {user && <AuthenticatedView />}
-          {user ? <LogoutButton /> : <LoginButton />}
+
         </ScreenContent>
+        {user ? <LogoutButton /> : <LoginButton />}
         {user && (
           <Link href={{ pathname: '/details', params: { name: user?.nickname || '' } }} asChild>
             <Button title="Show User Details" />
