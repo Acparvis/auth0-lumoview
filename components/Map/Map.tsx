@@ -1,6 +1,6 @@
 import { useAuth0 } from 'react-native-auth0';
 import { YStack, SizableText, XStack, Paragraph } from 'tamagui';
-import MapboxGL from '@react-native-mapbox-gl/maps';
+import MapboxGL from "@rnmapbox/maps";
 import { StyleSheet, View } from 'react-native';
 
 MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_API_KEY || '');
