@@ -1,7 +1,7 @@
 import { useAuth0 } from 'react-native-auth0';
-import { Button } from '../Button';
-import { H2, Paragraph, SizableText, Text, YStack } from 'tamagui';
+import { Paragraph, SizableText, Text, YStack } from 'tamagui';
 import { EmailVerificationIndicator } from '~/components/EmailVerificationIndicator/EmailVerificationIndicator';
+import { Map } from '~/components/Map/Map';
 
 export const AuthenticatedView = () => {
   const { user, error } = useAuth0();
@@ -20,6 +20,8 @@ export const AuthenticatedView = () => {
       })}
 
       <EmailVerificationIndicator />
+
+      <Map />
     </YStack>
   );
 };

@@ -17,6 +17,13 @@
         {
           "domain": "dev-58q7wd61yme0sqbo.us.auth0.com"
         }
+      ],
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "RNMapboxMapsDownloadToken": "sk.eyJ1Ijoic3RhZ2ljZGV2IiwiYSI6ImNsdXpscmgybTEzaTIyam1nNng4OXFhdXUifQ.hFTi4OvXyRWHR_AkqcMXoA"
+        }
       ]
     ],
     "experiments": {
