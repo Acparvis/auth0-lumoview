@@ -15,9 +15,9 @@ export const EmailVerificationIndicator = () => {
     <YStack space="$2" alignItems="flex-start" marginTop={'$4'}>
       <SizableText size="$8">Please verify your email</SizableText>
       <Paragraph size="$2" fontWeight="800">
-          {isCompanyEmail && 'Please check your company email for a verification link. Once verified, login again to access the admin map.'}
+          {isCompanyEmail && 'Please check your Lumoview email for a verification link. Once verified, login again to access the admin map.'}
 
-          {!isCompanyEmail && 'Please check your company email for a verification link.'}
+          {!isCompanyEmail && 'Please check your email for a verification link.'}
       </Paragraph>
     </YStack>
   );
