@@ -5,7 +5,7 @@ import { StyleSheet, View } from 'react-native';
 import { useEffect, useMemo } from 'react';
 import { locationSwitch } from '~/components/Map/constants';
 
-MapboxGL.setAccessToken('pk.eyJ1Ijoic3RhZ2ljZGV2IiwiYSI6ImNsdXpsMjdkNTFkcHUycW53d2Q0ODRhcm4ifQ.P7X052_AEAgusg-y0r-5Wg');
+MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_API_KEY || '');
 
 export const Map = () => {
   const { user } = useAuth0();
