@@ -51,6 +51,14 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.anonymous.auth0lumoview"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "7e2754cb-1fdf-4a65-9a65-d01bd9fc9a83"
+      }
     }
   }
 }
