@@ -26,10 +26,15 @@ export const Map = () => {
   return (
     <View style={styles.page}>
       <View style={styles.container}>
-        <MapboxGL.MapView style={styles.map} localizeLabels={{ locale: i18n.language }}>
+        <MapboxGL.MapView
+          style={styles.map}
+          localizeLabels={{ locale: i18n.language }}
+          testID="map-view">
           <MapboxGL.Camera
-            zoomLevel={15} // Sets the zoom level of the map
-            centerCoordinate={coordinates} // Sets the initial camera position to Big Ben
+            zoomLevel={15}
+            centerCoordinate={coordinates}
+            // @ts-ignore
+            testID="map-camera"
           />
         </MapboxGL.MapView>
       </View>
