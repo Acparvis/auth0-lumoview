@@ -4,6 +4,6 @@ export type Role = 'Admin' | 'Standard';
 
 export const roleIconSwitch = (role: Role) =>
   ({
-    Admin: <Star />,
-    Standard: <Check />,
+    Admin: <Star testID="star" />,
+    Standard: <Check testID="check" />,
   })[role];
