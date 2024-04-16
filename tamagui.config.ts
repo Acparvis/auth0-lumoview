@@ -52,8 +52,8 @@ export const Subtitle = styled(SizableText, {
 
 export const Button = styled(YStack, {
   alignItems: 'center',
-  backgroundColor: '#6366F1',
-  borderRadius: 28,
+  backgroundColor: '#2E2382',
+  borderRadius: 0,
   hoverStyle: {
     backgroundColor: '#5a5fcf',
   },

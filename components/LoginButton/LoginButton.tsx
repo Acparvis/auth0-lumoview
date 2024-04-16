@@ -1,12 +1,16 @@
 import { useAuth0 } from 'react-native-auth0';
 import { Button } from '../Button';
 
-export const LoginButton = () => {
-  const { authorize } = useAuth0();
+interface LoginButtonProps {
+  setIsLoading: (isLoading: boolean) => void;
+}
+export const LoginButton = ({ setIsLoading }: LoginButtonProps) => {
+  const { authorize, user } = useAuth0();
 
   const onPress = async () => {
     try {
-      await authorize();
+      setIsLoading(true);
+      await authorize().then(() => setIsLoading(false));
     } catch (e) {
       console.log(e);
     }

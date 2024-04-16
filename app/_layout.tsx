@@ -4,7 +4,7 @@ import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { TamaguiProvider } from 'tamagui';
-import { useAuth0, Auth0Provider } from 'react-native-auth0';
+import { Auth0Provider } from 'react-native-auth0';
 
 import config from '../tamagui.config';
 
@@ -24,8 +24,8 @@ export default function Layout() {
 
   return (
     <Auth0Provider
-      domain={'dev-58q7wd61yme0sqbo.us.auth0.com'}
-      clientId={'3CeBgqwzegz93msqsC4lBGhaVpA91Kqr'}>
+      domain={process.env.EXPO_PUBLIC_AUTH0_DOMAIN as string}
+      clientId={process.env.EXPO_PUBLIC_AUTH0_CLIENT_ID as string}>
       <TamaguiProvider config={config}>
         <Stack />
       </TamaguiProvider>

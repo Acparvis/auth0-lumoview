@@ -1,11 +1,11 @@
 import { useAuth0 } from 'react-native-auth0';
-import { YStack, SizableText, XStack, Paragraph } from 'tamagui';
 import MapboxGL from '@rnmapbox/maps';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { useEffect, useMemo } from 'react';
-import { locationSwitch } from '~/components/Map/constants';
+import { locationSwitch } from '~/components/Map/utils';
+import { styles } from '~/components/Map/styles';
 
-MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_API_KEY || '');
+MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_API_KEY as string);
 
 export const Map = () => {
   const { user } = useAuth0();
@@ -34,18 +34,3 @@ export const Map = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  page: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  container: {
-    height: 300,
-    width: 300,
-  },
-  map: {
-    flex: 1,
-  },
-});
