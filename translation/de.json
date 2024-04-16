@@ -1,0 +1,16 @@
+{
+  "button": {
+    "german": "Sprache auf Deutsch umstellen",
+    "english": "Sprache auf Englisch umstellen"
+  },
+  "getStarted": "Öffnen Sie den Code für diesen Bildschirm:",
+  "changeCode": "Ändern Sie einen beliebigen Text, speichern Sie die Datei, und Ihre App wird automatisch aktualisiert.",
+  "welcome": "Willkommen",
+  "yourRoles": "Ihre Rollen sind:",
+  "companyEmailCheck": "Bitte überprüfen Sie Ihre Lumoview-E-Mail auf einen Verifizierungslink. Nach der Verifizierung melden Sie sich erneut an, um auf die Admin-Karte zuzugreifen.",
+  "standardEmailCheck": "Bitte überprüfen Sie Ihre E-Mail auf einen Verifizierungslink.",
+  "loginSignUp": "Anmelden / Registrieren",
+  "logOut": "Abmelden",
+  "userDetails": "Settings",
+  "settings": "Einstellungen"
+}

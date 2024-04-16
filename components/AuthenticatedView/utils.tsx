@@ -1,4 +1,4 @@
-import { ChevronRight, Cloud, Moon, Star, Sun, Check } from '@tamagui/lucide-icons';
+import { Star, Check } from '@tamagui/lucide-icons';
 
 export type Role = 'Admin' | 'Standard';
 

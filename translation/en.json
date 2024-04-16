@@ -1,8 +1,16 @@
 {
   "button": {
-    "french": "Switch language to French",
+    "german": "Switch language to German",
     "english": "Switch language to English"
   },
   "getStarted": "Open up the code for this screen:",
-  "changeCode": "Change any of the text, save the file, and your app will automatically update."
+  "changeCode": "Change any of the text, save the file, and your app will automatically update.",
+  "welcome": "Welcome",
+  "yourRoles": "Your roles are:",
+  "companyEmailCheck": "Please check your Lumoview email for a verification link. Once verified, login again to access the admin map.",
+  "standardEmailCheck": "Please check your email for a verification link.",
+  "loginSignUp": "Log in / Sign up",
+  "logOut": "Log Out",
+  "userDetails": "Settings",
+  "settings": "Settings"
 }

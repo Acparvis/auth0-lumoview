@@ -1,7 +1,9 @@
 import { useAuth0 } from 'react-native-auth0';
 import { YStack, SizableText, Paragraph } from 'tamagui';
+import { useTranslation } from 'react-i18next';
 
 export const EmailVerificationIndicator = () => {
+  const { t } = useTranslation();
   const { user } = useAuth0();
 
   const emailVerified = user?.emailVerified;
@@ -14,10 +16,8 @@ export const EmailVerificationIndicator = () => {
     <YStack space="$2" alignItems="flex-start" marginTop={'$0'}>
       <SizableText size="$8">Please verify your email</SizableText>
       <Paragraph size="$1" fontWeight="800">
-        {isCompanyEmail &&
-          'Please check your Lumoview email for a verification link. Once verified, login again to access the admin map.'}
-
-        {!isCompanyEmail && 'Please check your email for a verification link.'}
+        {isCompanyEmail && t('companyEmailCheck')}
+        {!isCompanyEmail && t('standardEmailCheck')}
       </Paragraph>
     </YStack>
   );

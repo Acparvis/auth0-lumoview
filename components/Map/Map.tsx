@@ -4,10 +4,12 @@ import { View } from 'react-native';
 import { useEffect, useMemo } from 'react';
 import { locationSwitch } from '~/components/Map/utils';
 import { styles } from '~/components/Map/styles';
+import { useTranslation } from 'react-i18next';
 
 MapboxGL.setAccessToken(process.env.EXPO_PUBLIC_MAPBOX_API_KEY as string);
 
 export const Map = () => {
+  const { i18n } = useTranslation();
   const { user } = useAuth0();
 
   const userIsAdmin = user?.['https://lumoview.com/roles']?.includes('Admin');
@@ -24,7 +26,7 @@ export const Map = () => {
   return (
     <View style={styles.page}>
       <View style={styles.container}>
-        <MapboxGL.MapView style={styles.map}>
+        <MapboxGL.MapView style={styles.map} localizeLabels={{ locale: i18n.language }}>
           <MapboxGL.Camera
             zoomLevel={15} // Sets the zoom level of the map
             centerCoordinate={coordinates} // Sets the initial camera position to Big Ben
