@@ -7,7 +7,7 @@ export const EmailVerificationIndicator = () => {
   const emailVerified = user?.emailVerified;
   const isCompanyEmail = user?.['https://lumoview.com/isCompanyEmail'];
 
-  // We dont need to show any user messaging if the email is verified
+  // We don't need to show any user messaging if the email is verified
   if (emailVerified) return null;
 
   return (
