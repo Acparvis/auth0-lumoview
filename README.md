@@ -22,7 +22,13 @@
    npm install
    ```
 
-3. **Start the development server:**
+4. **Configure env variables:**
+   ```bash
+   cp .env.example .env
+   ```
+   - Update the `.env` file with your Auth0 credentials and Mapbox API key.
+
+4**Start the development server:**
    ```bash
    expo start
    ```
